@@ -29,8 +29,6 @@ schema = schema[:-2] + ")"
 values_schema = values_schema[:-2] + ")"
 print(schema)
 cur.execute("CREATE TABLE Data" + schema + ";")
-
-
 for line in data[1:]:
     cur.execute("INSERT INTO Data VALUES" + values_schema + ";", line)
 con.commit()
